@@ -17,5 +17,5 @@
     "allowSyntheticDefaultImports": true
   },
   "include": ["./src/**/*", "./*.js", "./*.mjs"],
-  "exclude": ["./src/**/*.test.ts","./build/**/*"]
+  "exclude": ["./build/**/*"]
 }
