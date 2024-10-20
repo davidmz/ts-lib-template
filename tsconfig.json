@@ -4,8 +4,9 @@
     "sourceMap": false,
     "target": "ESNext",
     "lib": ["ES2017", "DOM"],
+    "types": ["node"],
 
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "module": "ESNext",
     "declaration": false,
     "importHelpers": true,
@@ -16,6 +17,5 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./src/**/*", "./*.js", "./*.mjs"],
-  "exclude": ["./build/**/*"]
+  "include": ["./src/**/*", "./*.js", "./*.mjs"]
 }
