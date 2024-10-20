@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "sourceMap": false,
+    "target": "ESNext",
+    "lib": ["ES2017", "DOM"],
+
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "declaration": false,
+    "importHelpers": true,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["./src/**/*", "./*.js", "./*.mjs"],
+  "exclude": ["./src/**/*.test.ts","./build/**/*"]
+}
