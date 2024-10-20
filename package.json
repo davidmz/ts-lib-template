@@ -1,6 +1,6 @@
 {
   "name": "ts-lib-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "author": "XXX XXX",
   "keywords": [],
@@ -8,7 +8,8 @@
   "scripts": {
     "build": "ts-lib-build",
     "lint": "eslint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "devDependencies": {
     "@davidmz/ts-lib-build": "^0.2.4",
@@ -22,6 +23,7 @@
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3",
-    "typescript-eslint": "^8.10.0"
+    "typescript-eslint": "^8.10.0",
+    "vitest": "^2.1.3"
   }
 }
