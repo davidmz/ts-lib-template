@@ -12,6 +12,7 @@ import tsEslint from 'typescript-eslint';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default tsEslint.config(
+  // TypeScript config
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -29,10 +30,12 @@ export default tsEslint.config(
       '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
+  // JavaScript config
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
     extends: [tsEslint.configs.disableTypeChecked],
   },
+  // Common configs
   {
     plugins: {
       'simple-import-sort': simpleImportSort,

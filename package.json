@@ -2,13 +2,13 @@
   "name": "ts-lib-template",
   "version": "0.1.0",
   "description": "",
+  "author": "XXX XXX",
+  "keywords": [],
+  "license": "MIT",
   "scripts": {
     "build": "ts-lib-build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "XXX XXX",
-  "license": "MIT",
   "devDependencies": {
     "@davidmz/ts-lib-build": "^0.2.4",
     "@eslint/js": "^9.13.0",
