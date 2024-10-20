@@ -1,21 +1,32 @@
 // @ts-check
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
-import tseslint from 'typescript-eslint';
+import tsEslint from 'typescript-eslint';
 
-export default tseslint.config(
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+export default tsEslint.config(
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
       eslint.configs.recommended,
-      ...tseslint.configs.strict,
-      ...tseslint.configs.stylistic,
+      ...tsEslint.configs.strictTypeChecked,
+      ...tsEslint.configs.stylisticTypeChecked,
     ],
+    languageOptions: {
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
   },
   {
     files: ['**/*.{js,mjs,cjs,jsx}'],
-    extends: [tseslint.configs.disableTypeChecked],
+    extends: [tsEslint.configs.disableTypeChecked],
   },
   eslintConfigPrettier,
   eslintPluginPrettierRecommended,
