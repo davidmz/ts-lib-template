@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build": "ts-lib-build",
-    "check": "tsc && eslint && vitest run",
+    "check-all": "${npm_execpath} run lint && ${npm_execpath} run typecheck && ${npm_execpath} run test",
     "lint": "eslint",
     "typecheck": "tsc",
     "test": "vitest run",
